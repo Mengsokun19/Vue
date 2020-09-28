@@ -17,8 +17,8 @@
       v-bind:key='post._id'
       v-on:dblclick="deletePost(post._id)"
       >
-        {{ `${post.dateCreated.getDate()}/${post.dateCreated.getMonth()}/ ${post.dateCreated.getFullYear()}` }}
-        <p class="text">{{ post.text }}</p>
+        {{ `${post.dateCreated.getDate()}/${post.dateCreated.getMonth()+1}/ ${post.dateCreated.getFullYear()}` }}
+        <p class="text">{{ post.task }}</p>
       </div>
     </div>
   </div>

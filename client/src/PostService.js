@@ -1,3 +1,4 @@
+/* eslint-disable no-async-promise-executor */
 import axios from 'axios';
 
 const url = '/api/tasklist/';
@@ -5,9 +6,9 @@ const url = '/api/tasklist/';
 class PostService {
     // Get Posts
     static getPosts() {
-        return new Promise((resolve, reject) => {
+        return new Promise(async(resolve, reject) => {
             try {
-                const res = axios.get(url);
+                const res = await axios.get(url);
                 const data = res.data;
                 resolve(
                     data.map(post => ({
